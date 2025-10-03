@@ -73,11 +73,11 @@ class BeritaController extends Controller
     }
 
     // Tampilkan detail berita
-    public function show($slug)
-    {
-        $berita = Berita::where('slug', $slug)->findOrFail();
-        return view('berita.show', compact('berita'));
-    }
+    // public function show($slug)
+    // {
+    //     $berita = Berita::where('slug', $slug)->findOrFail();
+    //     return view('berita.show', compact('berita'));
+    // }
 
 
 

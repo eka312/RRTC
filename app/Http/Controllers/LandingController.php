@@ -9,9 +9,8 @@ class LandingController extends Controller
 {
     public function index()
     {
-        // ambil 3 artikel terbaru untuk ditampilkan di landing
+     
         $latestArticles = Berita::orderBy('tanggal_terbit', 'desc')->take(3)->get();
-
         return view('landingpage.index', compact('latestArticles'));
     }
 
@@ -105,8 +104,14 @@ class LandingController extends Controller
     {
         // ambil semua artikel
         $articles = Berita::orderBy('tanggal_terbit', 'desc')->paginate(6);
-
         return view('landingpage.berita', compact('articles'));
+    }
+
+    // halaman detail berita
+    public function beritaDetail($slug)
+    {
+        $article = Berita::where('slug', $slug)->firstOrFail();
+        return view('landingpage.berita-detail', compact('article'));
     }
 
     public function contact()

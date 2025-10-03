@@ -28,7 +28,7 @@
                         <tr>
                             <th style="width:6%">No</th>
                             <th>Judul</th>
-                            <th class="text-center" style="width:16%">Tanggal</th>
+                            <th class="text-center" style="width:14%">Tanggal</th>
                             <th class="text-center" style="width:12%">Status</th>
                             <th class="text-center" style="width:12%">Aksi</th>
                         </tr>
@@ -222,11 +222,6 @@
     </div>
 
 </div>
-
-
-
-
-
 
  <!-- modal tambah data -->
 <div class="modal fade" id="addArticleModal" tabindex="-1" aria-labelledby="addArticleModalLabel" aria-hidden="true">

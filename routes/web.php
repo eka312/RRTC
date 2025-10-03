@@ -69,6 +69,7 @@ Route::controller(LandingController::class)->group(function () {
 
     Route::get('/mengapa', 'mengapa')->name('landing.mengapa');
     Route::get('/berita', 'berita')->name('landing.berita');
+    Route::get('/berita-detail/{slug}', 'beritaDetail')->name('landing.berita-detail');
     Route::get('/contact', 'contact')->name('landing.contact');
 });
 // halaman landing end
@@ -101,9 +102,6 @@ Route::post('/logout', function () {
 })->name('logout');
 
 
-
-//Route halaman detail projek
-Route::get('/detail/{slug}', [BeritaController::class, 'show'])->name('berita.show');
 
 
 Route::controller(AuthController::class)->group(function () {
