@@ -3,40 +3,40 @@
 @section('title', 'Beranda | Wajib Pajak')
 
 @section('content')
-<div class="container-fluid position-relative p-0">
-    <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img class="w-100" src="{{asset('template_rrtc/img/carousel-1.jpg') }}" alt="Gambar 1">
-                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <div class="p-3" style="max-width: 900px;">
-                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">Konsultasi Pajak Profesional</h5>
-                        <h1 class="display-1 text-white mb-md-4 animated zoomIn">Solusi Pajak Efisien untuk Bisnis Anda</h1>
-                        <a href="{{ route('landing.contact') }}" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Konsultasi Sekarang</a>
+    <div class="container-fluid position-relative p-0">
+        <div id="header-carousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="w-100" src="{{asset('template_rrtc/img/carousel-1.jpg') }}" alt="Gambar 1">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Konsultasi Pajak Profesional</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Solusi Pajak Efisien untuk Bisnis Anda</h1>
+                            <a href="{{ route('landing.contact') }}" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Konsultasi Sekarang</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="carousel-item ">
+                    <img class="w-100" src="{{asset('template_rrtc/img/carousel-2.jpg') }}" alt="Gambar 2">
+                    <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
+                        <div class="p-3" style="max-width: 900px;">
+                            <h5 class="text-white text-uppercase mb-3 animated slideInDown">Strategi Pajak Inovatif</h5>
+                            <h1 class="display-1 text-white mb-md-4 animated zoomIn">Optimalkan Pajak Anda Tanpa Ribet</h1>
+                            <a href="{{ route('landing.contact') }}" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Kontak Kami</a>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="carousel-item ">
-                <img class="w-100" src="{{asset('template_rrtc/img/carousel-2.jpg') }}" alt="Gambar 2">
-                <div class="carousel-caption d-flex flex-column align-items-center justify-content-center">
-                    <div class="p-3" style="max-width: 900px;">
-                        <h5 class="text-white text-uppercase mb-3 animated slideInDown">Strategi Pajak Inovatif</h5>
-                        <h1 class="display-1 text-white mb-md-4 animated zoomIn">Optimalkan Pajak Anda Tanpa Ribet</h1>
-                        <a href="{{ route('landing.contact') }}" class="btn btn-outline-light py-md-3 px-md-5 animated slideInRight">Kontak Kami</a>
-                    </div>
-                </div>
-            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon"></span>
+                <span class="visually-hidden">Sebelumnya</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
+                <span class="carousel-control-next-icon"></span>
+                <span class="visually-hidden">Selanjutnya</span>
+            </button>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#header-carousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon"></span>
-            <span class="visually-hidden">Sebelumnya</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#header-carousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon"></span>
-            <span class="visually-hidden">Selanjutnya</span>
-        </button>
     </div>
-</div>
 
     <!-- Facts Start -->
     <div class="container-fluid facts py-5 pt-lg-0">
@@ -620,7 +620,7 @@
                                         <small><i class="far fa-calendar-alt text-primary me-2"></i>{{ \Carbon\Carbon::parse($artikel->tanggal_terbit)->format('d M, Y') }}</small>
                                     </div>
                                     <h4 class="mb-3 text-primary">{{ $artikel->judul }}</h4>
-                                    <p class="text-white flex-grow-1">{{ Str::limit($artikel->isi, 120) }}</p>
+                                    <p class="text-white flex-grow-1">{{ Str::limit($artikel->isi, 250) }}</p>
                                     <a class="text-uppercase mt-auto" href="{{ route('landing.berita') }}">Selengkapnya <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -628,7 +628,8 @@
                     @empty
                         <p class="text-muted">Belum ada artikel</p>
                     @endforelse
-                </div>
+
+
                 <!-- Mobile Version -->
                 <div id="carouselExampleControls" class="carousel slide d-md-none" data-bs-ride="carousel">
                     <div class="carousel-inner">
@@ -647,7 +648,7 @@
                                             <small><i class="far fa-calendar-alt text-primary me-1"></i>{{ \Carbon\Carbon::parse($artikel->tanggal_terbit)->format('d M, Y') }}</small>
                                         </div>
                                         <h4 class="mb-2 text-primary">{{ $artikel->judul }}</h4>
-                                        <p class="flex-grow-1">{{ Str::limit($artikel->isi, 100) }}</p>
+                                        <p class="flex-grow-1">{{ Str::limit($artikel->isi, 150) }}</p>
                                         <a class="text-uppercase mt-auto" href="{{ route('landing.berita') }}">
                                             Selengkapnya <i class="bi bi-arrow-right"></i>
                                         </a>

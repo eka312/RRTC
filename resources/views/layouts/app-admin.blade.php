@@ -145,92 +145,92 @@
         @yield('content')
     </main>
 
-<!-- Modal Logout -->
-<div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered">
-        <div class="modal-content border-0 shadow-sm rounded-3">
+    <!-- Modal Logout -->
+    <div class="modal fade" id="logoutModal" tabindex="-1" aria-labelledby="logoutModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content border-0 shadow-sm rounded-3">
 
-            <!-- Header -->
-            <div class="modal-header border-0">
-                <h5 class="modal-title fw-semibold d-flex align-items-center text-danger" id="logoutModalLabel">
-                    <i class="bi bi-box-arrow-right me-2  fs-5"></i> Konfirmasi Logout
-                </h5>
-                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-            </div>
+                <!-- Header -->
+                <div class="modal-header border-0">
+                    <h5 class="modal-title fw-semibold d-flex align-items-center text-danger" id="logoutModalLabel">
+                        <i class="bi bi-box-arrow-right me-2  fs-5"></i> Konfirmasi Logout
+                    </h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
 
-            <!-- Body -->
-            <div class="modal-body text-center py-4">
-                <i class="bi bi-person-circle display-4  mb-3"></i>
-                <p class="mb-0 text-danger">
-                    Apakah kamu yakin ingin <span class="fw-semibold">keluar</span> dari dashboard?
-                </p>
-            </div>
+                <!-- Body -->
+                <div class="modal-body text-center py-4">
+                    <i class="bi bi-person-circle display-4  mb-3"></i>
+                    <p class="mb-0 text-danger">
+                        Apakah kamu yakin ingin <span class="fw-semibold">keluar</span> dari dashboard?
+                    </p>
+                </div>
 
-            <!-- Footer -->
-            <div class="modal-footer justify-content-end border-0">
-                <button type="button" class="btn btn-primary btn-sm rounded-3 px-3" data-bs-dismiss="modal">
-                    <i class="bi bi-x-circle me-1"></i> Batal
-                </button>
-                <form action="{{ route('logout') }}" method="POST" class="d-inline">
-                    @csrf
-                    <button type="submit" class="btn btn-danger btn-sm rounded-3 px-3">
-                        <i class="bi bi-box-arrow-right me-1"></i> Logout
+                <!-- Footer -->
+                <div class="modal-footer justify-content-end border-0">
+                    <button type="button" class="btn btn-primary btn-sm rounded-3 px-3" data-bs-dismiss="modal">
+                        <i class="bi bi-x-circle me-1"></i> Batal
                     </button>
-                </form>
-            </div>
+                    <form action="{{ route('logout') }}" method="POST" class="d-inline">
+                        @csrf
+                        <button type="submit" class="btn btn-danger btn-sm rounded-3 px-3">
+                            <i class="bi bi-box-arrow-right me-1"></i> Logout
+                        </button>
+                    </form>
+                </div>
 
+            </div>
         </div>
     </div>
-</div>
-<!-- Modal Logout End -->
+    <!-- Modal Logout End -->
 
 
 
 
     <script>
-    function previewImage(event) {
-        const input = event.target;
-        const preview = document.getElementById('coverPreview');
+        function previewImage(event) {
+            const input = event.target;
+            const preview = document.getElementById('coverPreview');
 
-        if (input.files && input.files[0]) {
-            const reader = new FileReader();
-            reader.onload = function(e) {
-                preview.src = e.target.result;
-                preview.classList.remove('d-none');
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.classList.remove('d-none');
+                }
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                preview.src = '';
+                preview.classList.add('d-none');
             }
-            reader.readAsDataURL(input.files[0]);
-        } else {
-            preview.src = '';
-            preview.classList.add('d-none');
         }
-    }
     </script>
 
-<script>
-function previewEditImage(event, id) {
-    const preview = document.getElementById('editPreview' + id);
-    const label = document.getElementById('newLabel' + id);
-    const current = document.getElementById('currentImage' + id);
+    <script>
+        function previewEditImage(event, id) {
+            const preview = document.getElementById('editPreview' + id);
+            const label = document.getElementById('newLabel' + id);
+            const current = document.getElementById('currentImage' + id);
 
-    const input = event.target;
+            const input = event.target;
 
-    if (input.files && input.files[0]) {
-        const reader = new FileReader();
-        reader.onload = function(e) {
-            preview.src = e.target.result;
-            preview.classList.remove('d-none');
-            label.classList.remove('d-none');
-            if(current) current.style.display = 'none';
+            if (input.files && input.files[0]) {
+                const reader = new FileReader();
+                reader.onload = function(e) {
+                    preview.src = e.target.result;
+                    preview.classList.remove('d-none');
+                    label.classList.remove('d-none');
+                    if(current) current.style.display = 'none';
+                }
+                reader.readAsDataURL(input.files[0]);
+            } else {
+                preview.src = '';
+                preview.classList.add('d-none');
+                label.classList.add('d-none');
+                if(current) current.style.display = 'block';
+            }
         }
-        reader.readAsDataURL(input.files[0]);
-    } else {
-        preview.src = '';
-        preview.classList.add('d-none');
-        label.classList.add('d-none');
-        if(current) current.style.display = 'block';
-    }
-}
-</script>
+    </script>
 
 
     <!-- Load jQuery dulu -->

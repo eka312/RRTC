@@ -39,7 +39,7 @@
                                         <small><i class="far fa-calendar-alt text-primary me-2"></i>{{ \Carbon\Carbon::parse($artikel->tanggal_terbit)->format('d M, Y') }}</small>
                                     </div>
                                     <h4 class="mb-3 text-primary">{{ $artikel->judul }}</h4>
-                                    <p class="text-white flex-grow-1">{{ Str::limit($artikel->isi, 120) }}</p>
+                                    <p class="text-white flex-grow-1">{{ Str::limit($artikel->isi, 250) }}</p>
                                     <a class="text-uppercase mt-auto" href="{{ route('landing.berita') }}">Selengkapnya <i class="bi bi-arrow-right"></i></a>
                                 </div>
                             </div>
@@ -66,7 +66,7 @@
                                             <small><i class="far fa-calendar-alt text-primary me-1"></i>{{ \Carbon\Carbon::parse($artikel->tanggal_terbit)->format('d M, Y') }}</small>
                                         </div>
                                         <h4 class="mb-2 text-primary">{{ $artikel->judul }}</h4>
-                                        <p class="flex-grow-1">{{ Str::limit($artikel->isi, 100) }}</p>
+                                        <p class="flex-grow-1">{{ Str::limit($artikel->isi, 150) }}</p>
                                         <a class="text-uppercase mt-auto" href="{{ route('landing.berita') }}">
                                             Selengkapnya <i class="bi bi-arrow-right"></i>
                                         </a>
