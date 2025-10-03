@@ -136,40 +136,34 @@
                         <!-- Modal Edit per berita End -->
                                                             
                         <!-- Modal Hapus -->
+                        
+
+
+
                         <div class="modal fade" id="deleteModal{{ $item->id_berita }}" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
                             <div class="modal-dialog modal-dialog-centered">
-                                <div class="modal-content border-0 shadow-sm rounded-3">
-                                    
-                                    <!-- Header -->
-                                    <div class="modal-header border-0">
-                                        <h5 class="modal-title fw-semibold text-danger d-flex align-items-center" id="deleteModalLabel">
-                                            <i class="bi bi-exclamation-circle me-2 fs-4"></i> Konfirmasi Hapus
-                                        </h5>
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h1 class="modal-title fs-5 text-center" id="deleteModalLabel">Konfirmasi Hapus</h1>
                                         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                                     </div>
-
-                                    <!-- Body -->
-                                    <div class="modal-body text-center text-danger">
-                                        <i class="fa fa-trash display-3 mb-3"></i>
-                                        <p class="mb-0 ">
-                                            Yakin ingin menghapus artikel ini? <br>
-                                            <span class="fw-semibold">Aksi tidak dapat dibatalkan.</span>
-                                        </p>
+                                    <div class="modal-body text-center">
+                                        <i class="fa fa-trash display-3 mb-3"></i><br>
+                                        Apakah anda yakin ingin menghapus artikel ini?
                                     </div>
-
-                                    <!-- Footer -->
-                                    <div class="modal-footer justify-content-end border-0">
-                                        <button type="button" class="btn btn-primary btn-sm rounded-3 px-3" data-bs-dismiss="modal">
-                                            <i class="bi bi-x-circle me-1"></i> Batal
-                                        </button>
-                                        <a href="{{ route('berita.destroy', $item->id_berita) }}" class="btn btn-danger btn-sm rounded-3 px-3">
-                                            <i class="bi bi-trash me-1"></i> Hapus
+                                    <div class="modal-footer">
+                                        <button type="button" class="btn btn-secondary rounded-3" data-bs-dismiss="modal">Batal</button>
+                                        <a href="{{ route('berita.destroy', $item->id_berita) }}" class="btn btn-danger rounded-3">
+                                            Hapus
                                         </a>
                                     </div>
                                 </div>
                             </div>
                         </div>
+
                         <!-- Modal Hapus End -->
+
+
 
 
                         <!-- Modal Show per berita -->

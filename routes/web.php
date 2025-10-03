@@ -76,39 +76,31 @@ Route::controller(LandingController::class)->group(function () {
 
 
 
-// Route::middleware(['auth'])->group(function () {
-   
-// });
+Route::middleware(['auth'])->group(function () {
+    Route::controller(BeritaController::class)->group(function () {
+        Route::get('/admin', 'index')->name('berita.index');
+        Route::get('/dashboard', 'dashboard')->name('dashboard');
+        Route::post('/tambah', 'store')->name('berita.store');
+        Route::put('/edit/{id}', 'update')->name('berita.update');
+        Route::get('/hapus/{id}', 'destroy')->name('berita.destroy');
+    });
 
-
-Route::controller(BeritaController::class)->group(function () {
-    Route::get('/admin', 'index')->name('berita.index');
-    Route::get('/dashboard', 'dashboard')->name('dashboard');
-    Route::post('/tambah', 'store')->name('berita.store');
-
-    Route::get('/edit/{id}', 'edit')->name('berita.edit');
-    Route::put('/edit/{id}', 'update')->name('berita.update');
-
-    Route::get('/hapus/{id}', 'destroy')->name('berita.destroy');
+    Route::post('/logout', function () {
+        Auth::logout();
+        request()->session()->invalidate();
+        request()->session()->regenerateToken();
+        return redirect('/');
+    })->name('logout');
+    
 });
-
-
-// Route halaman logout
-Route::post('/logout', function () {
-    Auth::logout();
-    request()->session()->invalidate();
-    request()->session()->regenerateToken();
-    return redirect('/');
-})->name('logout');
-
 
 
 
 Route::controller(AuthController::class)->group(function () {
-    // Route halaman login
-    Route::get('/login', 'index')->name('login');
+    Route::get('/login', 'login')->name('login');
     Route::post('/login', 'authenticate')->name('login.submit');
 });
+
 
 
 

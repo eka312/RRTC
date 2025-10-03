@@ -31,13 +31,6 @@ class BeritaController extends Controller
         ));
     }
     
-
-    // Tampilkan form tambah berita
-    // public function create()
-    // {
-    //     return view('berita.create');
-    // }
-
     // Simpan berita baru
     public function store(Request $request)
     {
@@ -71,23 +64,6 @@ class BeritaController extends Controller
         return redirect()->back()->with('success', 'Berita berhasil ditambahkan!');
     
     }
-
-    // Tampilkan detail berita
-    // public function show($slug)
-    // {
-    //     $berita = Berita::where('slug', $slug)->findOrFail();
-    //     return view('berita.show', compact('berita'));
-    // }
-
-
-
-    // public function edit($id)
-    // {
-    //     $berita = Berita::findOrFail($id); // ini langsung instance tunggal
-    //     return view('berita.edit', compact('berita'));
-    //     dd($id, Berita::findOrFail($id));
-       
-    // }
     
     // Update berita
     public function update(Request $request, $id)
