@@ -620,16 +620,19 @@
                                         <small><i class="far fa-calendar-alt text-primary me-2"></i>{{ \Carbon\Carbon::parse($artikel->tanggal_terbit)->format('d M, Y') }}</small>
                                     </div>
                                     <h4 class="mb-3 text-primary">{{ $artikel->judul }}</h4>
-                                    <p class="text-white flex-grow-1">{{ Str::limit($artikel->isi, 250) }}</p>
+                                    <p class="text-white flex-grow-1">{{ Str::limit($artikel->isi, 240) }}</p>
                                     <a class="text-uppercase mt-auto" href="{{ route('landing.berita-detail', $artikel->slug) }}">
                                         Selengkapnya <i class="bi bi-arrow-right"></i>
                                     </a>
                                 </div>
                             </div>
                         </div>
+
+
                     @empty
                         <p class="text-muted">Belum ada artikel</p>
                     @endforelse
+
 
 
                 <!-- Mobile Version -->
