@@ -45,45 +45,50 @@
         <!--Form Login Start-->
         <div class="bg-primary vh-100">
             <div class="container">
-                <!-- Outer Row -->
                 <div class="row justify-content-center ">
                     <div class="col-xl-6 col-lg-12 col-md-9">
                         <div class="card o-hidden border-0 shadow-lg my-5 rounded-3">
                             <div class="card-body p-0">
-                                <!-- Nested Row within Card Body -->
                                 <div class="row">
                                     <div class="col-lg-6 d-none d-lg-block bg-login-image ">
                                     </div>
                                     <div class="col-lg-12">
                                         <div class="p-5">
-                                            <img src="../frontend/img/RRTC2(PNG)1.png" class="rounded mx-auto d-block m-0" alt="Logo" style="width: 200px; height: auto;">
-                                            <div class="text-center mt-3">
+                                            <img src="{{asset('template_rrtc/img/RRTC2PNG1.png')}}" class="rounded mx-auto d-block m-0" alt="Logo" style="max-width: 250px;">
+                                            <div class="text-center mt-4">
                                                 <h1 class="h4 text-gray-900 mb-4"><b>Welcome Back!</b></h1>
                                             </div>
                                             <form action="{{ route('login') }}" method="POST">
-                                                <div class="form-group mb-3">
-                                                    <input type="email" class="form-control form-control-user rounded-3 " id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email" name="email">
+                                                @csrf
+                                                <div class="form-group mb-4">
+                                                    <input type="email" class="form-control form-control-user rounded-3 " 
+                                                    id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Email" 
+                                                    name="email">
+                                                    @error('email')
+                                                    <div class="invalid-feedback">
+                                                        tidak valid
+                                                    </div>
+                                                    @enderror
                                                 </div>
-                                                <div class="form-group mb-3">
-                                                    <input type="password" class="form-control form-control-user rounded-3" id="exampleInputPassword" placeholder="Password" name="password">
+                                                <div class="form-group mb-4">
+                                                    <input type="password" class="form-control form-control-user rounded-3" 
+                                                    id="exampleInputPassword" placeholder="Password" name="password">
+                                                    @error('email')
+                                                    <div class="invalid-feedback">
+                                                        tidak valid
+                                                    </div>
+                                                    @enderror                                                
                                                 </div>
-                                                <div class="form-check mb-3">
+                                                <div class="form-check mb-4">
                                                     <input class="form-check-input" type="checkbox" value="" id="rememberMe">
-                                                    <label class="form-check-label text-muted " for="rememberMe" style="line-height: 1.5rem; font-size: 14px;">
-                                                      Remember Me
+                                                    <label class="form-check-label text-muted " for="rememberMe" 
+                                                        style="line-height: 1.5rem; font-size: 14px;">
+                                                        Remember Me
                                                     </label>
                                                 </div>
                                                 <button type="submit" class="btn btn-primary w-100 rounded-3 m-0">Login</button>
-                                                <hr>
-
-                                               
-                                               
+                                                    
                                             </form>
-                                            
-                                            <!-- <div class="text-center">
-                                                <a class="small" href="/forgot-password">Forgot Password?</a>
-                                            </div> -->
-                                           
                                         </div>
                                     </div>
                                 </div>
