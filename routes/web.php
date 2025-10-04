@@ -22,11 +22,11 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 //     return view('welcome');
 // });
 
-Route::group(
-    [
-        'prefix' => LaravelLocalization::setLocale(),
-        'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeCookieRedirect']
-    ], function () {
+// Route::group(
+//     [
+//         'prefix' => LaravelLocalization::setLocale(),
+//         'middleware' => ['localeSessionRedirect', 'localizationRedirect', 'localeCookieRedirect']
+//     ], function () {
 
     // Halaman landing start
     Route::controller(LandingController::class)->group(function () {
@@ -80,7 +80,7 @@ Route::group(
     });
     // halaman landing end
 
-});
+// });
 
 
     Route::middleware(['auth'])->group(function () {

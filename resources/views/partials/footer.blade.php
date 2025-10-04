@@ -41,18 +41,19 @@
                     <div class="row gx-5">
                         <div class="col-lg-4 col-md-12 pt-5 mb-5">
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">{{__('footer_contact')}} </h3>
+                                <h3 class="text-light mb-0">Hubungi Kami</h3>
                             </div>
                             <h6 class="mb-1 text-white">HEAD OFFICE</h6>
                             <div class="d-flex mb-3">
                                 <i class="bi bi-geo-alt text-primary me-2"></i>
-                                <p class="mb-0"> {{__('footer_address')}} </p>
+                                <p class="mb-0">Jl. S. Supriadi No.136, Gedog, Kec. Sananwetan, Kota Blitar</p>
                             </div>
                             <h6 class="mb-1 text-white">BRANCH OFFICE</h6>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-geo-alt text-primary me-2"></i>
-                                <p class="mb-0">
-                                    {{__('footer_branch_address')}}
+                                <p class="mb-0">Jl. Raya Kodau No.36 C,
+                                    RT 001/023, Jatiwarna,
+                                    Pondok Melati, Kota Bekasi
                                 </p>
                             </div>
                             <div class="d-flex mb-2">
@@ -61,7 +62,7 @@
                             </div>
                             <div class="d-flex mb-2">
                                 <i class="bi bi-telephone text-primary me-2"></i>
-                                <p class="mb-0">+62 821 4242 2828</p>
+                                <p class="mb-0">+0821 4242 2828</p>
                             </div>
                             <div class="d-flex mt-4">
                                 <a class="btn btn-primary btn-square me-2" href="#">
@@ -80,47 +81,48 @@
                         </div>
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">{{__('footer_link')}} </h3>
+                                <h3 class="text-light mb-0">Tautan Cepat</h3>
                             </div>
                             <div class="link-animated d-flex flex-column justify-content-start">
                                 <a class="text-light mb-2" href="{{route('landing.index')}}">
                                     <i class="bi bi-arrow-right text-primary me-2"></i>
-                                    {{__('footer_home')}}
+                                    Beranda
                                 </a>
                                 <a class="text-light mb-2" href="{{route('landing.about')}}">
                                     <i class="bi bi-arrow-right text-primary me-2"></i>
-                                    {{__('footer_about')}}
+                                    Tentang Kami
                                 </a>
                                 <a class="text-light mb-2" href="{{route('landing.mengapa')}}">
                                     <i class="bi bi-arrow-right text-primary me-2"></i>
-                                    {{__('footer_why')}}
+                                    Mengapa Kami
                                 </a>
                                 <a class="text-light mb-2" href="{{route('landing.layanan')}}">
                                     <i class="bi bi-arrow-right text-primary me-2"></i>
-                                    {{__('footer_service')}}
+                                    Layanan
                                 </a>
                                 <a class="text-light mb-2" href="{{route('landing.partner')}}">
                                     <i class="bi bi-arrow-right text-primary me-2"></i>
-                                    {{__('footer_partners')}}
+                                    Partner
                                 </a>
                                 <a class="text-light mb-2" href="{{route('landing.berita')}}">
                                     <i class="bi bi-arrow-right text-primary me-2"></i>
-                                    {{__('footer_news')}}
+                                    Berita
                                 </a>
                                 <a class="text-light mb-2" href="{{route('landing.contact')}}">
                                     <i class="bi bi-arrow-right text-primary me-2"></i>
-                                    {{__('footer_contact')}}
+                                    Kontak
                                 </a>
                             </div>
                         </div>
 
                         <div class="col-lg-4 col-md-12 pt-0 pt-lg-5 mb-5">
                             <div class="section-title section-title-sm position-relative pb-3 mb-4">
-                                <h3 class="text-light mb-0">{{__('footer_title')}} </h3>
+                                <h3 class="text-light mb-0">Tentang RRTC</h3>
                             </div>
                             <p class="mt-3 mb-4">
-                                {{__('footer_description')}}
-                                
+                                RRTC adalah konsultan pajak profesional yang mengedepankan integritas, keahlian, dan teknologi. 
+                                Kami hadir untuk membantu individu maupun perusahaan mengelola kewajiban perpajakan dengan solusi 
+                                yang tepat, efisien, dan terpercaya.
                             </p>
                         </div>
                     </div>
