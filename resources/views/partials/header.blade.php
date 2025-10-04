@@ -86,9 +86,8 @@
                 </a>
             
             <!-- Dropdown Bahasa -->
-            <div class="nav-item dropdown">
+            <!-- <div class="nav-item dropdown">
                 <a href="#" class="nav-link dropdown-toggle text-primary d-flex align-items-center" data-bs-toggle="dropdown">
-                    <!-- Ikon Globe -->
                     <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" 
                         aria-hidden="true" role="presentation" focusable="false" 
                         style="height: 18px; width: 18px; fill: currentColor; margin-right: 6px;">
@@ -108,7 +107,7 @@
                         </button>
                     </li>
                 </ul>
-            </div>
+            </div> -->
 
             
             <!-- Login button -->
